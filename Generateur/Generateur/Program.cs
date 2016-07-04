@@ -14,6 +14,7 @@ namespace ConsoleApplication13
         public static void Main(string[] args)
         {
             Commande BDDcommande = new Commande("127.0.0.1", "root", "", "client");
+            Fabrication fabrication = new Fabrication("127.0.0.1", "root", "", "client");
             Console.ReadLine();
         }
 
