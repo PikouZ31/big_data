@@ -8,17 +8,22 @@ using MySql.Data.MySqlClient;
 
 namespace ConsoleApplication13
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-
-            /*MySqlConnection conn;
+            MySqlConnection conn;
             string myConnectionString;
 
-            myConnectionString = "server=127.0.0.1;uid=root;" +
-                "pwd=;database=client;";
+
+            string server = "127.0.0.1";
+            string userid = "root";
+            string password = "";
+            string database = "client";
+
+            myConnectionString = "server="+ server +";uid="+ userid +";pwd="+ password +";database="+ database +";";
             conn = new MySql.Data.MySqlClient.MySqlConnection();
+
             try
             {
                 conn.ConnectionString = myConnectionString;
@@ -30,39 +35,7 @@ namespace ConsoleApplication13
                 Console.ReadLine();
             }
 
-            /*
-            MySqlCommand cmd = conn.CreateCommand();
 
-            // Requête SQL
-            cmd.CommandText = "INSERT INTO nom (NOM) VALUES (@NOM)";
-
-            // utilisation de l'objet contact passé en paramètre
-            cmd.Parameters.AddWithValue("@NOM", "Gerad");
-
-            // Exécution de la commande SQL
-            cmd.ExecuteNonQuery();*/
-
-            /*MySqlCommand cmd = conn.CreateCommand();
-
-            Random rnd1 = new Random();
-            int i = rnd1.Next(1,2);
-
-            // Requête SQL
-            cmd.CommandText = "SELECT NOM FROM nom WHERE ID = '"+ i + "'";
-
-
-            // Exécution de la commande SQL
-            MySqlDataReader reader = cmd.ExecuteReader();
-
-            while (reader.Read())
-            {
-                Console.WriteLine(reader[0]);
-            }
-
-            Console.ReadLine();
-
-
-            conn.Close();*/
 
             genererreference();
             Console.WriteLine();
