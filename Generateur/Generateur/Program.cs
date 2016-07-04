@@ -15,8 +15,21 @@ namespace ConsoleApplication13
         {
             Commande BDDcommande = new Commande("127.0.0.1", "root", "", "commande");
 
+            //Mike
+            Fabrication fabrication = new Fabrication("192.168.10.1", "root", "", "fabrication");
+            fabrication.ConnexionOpen();
+            //fabrication.GenererLigneProduction("A",1,180,1);
+            //fabrication.GenererLigneProduction("B", 3, 300, 1);
+            //fabrication.GenererLigneProduction("C", 2, 250, 1);
+            fabrication.GenererProduits();
+
+            fabrication.ConnexionClose();
+
+
+
+
             //BDDcommande.GenererSatisfaction();
-            for(int i =0;i<20;i++)
+            for (int i =0;i<20;i++)
             {
                 BDDcommande.GenererEtat();
             }
