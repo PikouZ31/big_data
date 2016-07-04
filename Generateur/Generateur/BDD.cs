@@ -52,6 +52,7 @@ namespace ConsoleApplication13
             }
         }
 
+
         public string GetName()
         {
             MySqlCommand cmd = this.connexion.CreateCommand();
@@ -70,7 +71,66 @@ namespace ConsoleApplication13
                 //Console.WriteLine(reader[0]+" " + reader[1]);
                 return reader[0] + "";
             }
+            return null;
+        }
 
+        public string GetSurname()
+        {
+            MySqlCommand cmd = this.connexion.CreateCommand();
+            Random rnd1 = new Random();
+            int i = rnd1.Next(1, 100);
+
+            // Requête SQL
+            cmd.CommandText = "SELECT PRENOM FROM nom WHERE ID = '" + i + "'";
+
+            // Exécution de la commande SQL
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                //Console.WriteLine(reader[0]+" " + reader[1]);
+                return reader[0] + "";
+            }
+            return null;
+        }
+
+        public string GetClient()
+        {
+            MySqlCommand cmd = this.connexion.CreateCommand();
+            Random rnd1 = new Random();
+            int i = rnd1.Next(1, 100);
+
+            // Requête SQL
+            cmd.CommandText = "SELECT NOM , PRENOM FROM nom WHERE ID = '" + i + "'";
+
+            // Exécution de la commande SQL
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                //Console.WriteLine(reader[0]+" " + reader[1]);
+                return reader[0] + " " + reader[1];
+            }
+            return null;
+        }
+
+        public string GetCountry()
+        {
+            MySqlCommand cmd = this.connexion.CreateCommand();
+            Random rnd1 = new Random();
+            int i = rnd1.Next(1, 100);
+
+            // Requête SQL
+            cmd.CommandText = "SELECT pay FROM pay WHERE ID = '" + i + "'";
+
+            // Exécution de la commande SQL
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                //Console.WriteLine(reader[0]+" " + reader[1]);
+                return reader[0] + "";
+            }
             return null;
         }
 
