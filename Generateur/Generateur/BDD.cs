@@ -10,19 +10,10 @@ namespace ConsoleApplication13
         private string userid = "root";
         private string password = "";
         private string database = "client";
-        public MySqlConnection connexion
+        public MySqlConnection connexion;
+
+        public BDD(string server, string userid, string password, string database)
         {
-            get
-            {
-                return this.connexion;
-            }
-            set
-            {
-                this.connexion = value;
-            }
-        }
-            
-        public BDD(string server, string userid, string password, string database) {
 
             this.server = server;
             this.userid = userid;
@@ -30,7 +21,8 @@ namespace ConsoleApplication13
             this.database = database;
         }
 
-        public void ConnexionOpen() {
+        public void ConnexionOpen()
+        {
             String myConnectionString = "server=" + this.server + ";uid=" + this.userid + ";pwd=" + this.password + ";database=" + this.database + ";";
             this.connexion = new MySql.Data.MySqlClient.MySqlConnection();
 

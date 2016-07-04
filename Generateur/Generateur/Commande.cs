@@ -26,24 +26,35 @@ namespace Generateur
             Random rnd3 = new Random();
             Random rnd4 = new Random();
 
-            rnd1.Next(0, 10);
-            rnd2.Next(0, 10);
-            rnd3.Next(0, 10);
-            rnd4.Next(0, 10);
+            int packaging = rnd1.Next(0, 10);
+            int produit = rnd2.Next(0, 10);
+            int delais = rnd3.Next(0, 10);
+            int sav = rnd4.Next(0, 10);
+
 
             MySqlCommand cmd = bdd.connexion.CreateCommand();
 
             // Requête SQL
-            cmd.CommandText = "INSERT INTO nom (NOM) VALUES (@NOM)";
-
+            cmd.CommandText = "INSERT INTO Satisfaction (Packaging,Produit,Delais_livraison,SAV) VALUES (@Packaging,@Produit,@Delais_livraison,@SAV)";
             // utilisation de l'objet contact passé en paramètre
-            cmd.Parameters.AddWithValue("@NOM", "Gerad");
+            cmd.Parameters.AddWithValue("@Packaging", packaging);
+            cmd.Parameters.AddWithValue("@Produit", produit);
+            cmd.Parameters.AddWithValue("@Delais_livraison", delais);
+            cmd.Parameters.AddWithValue("@SAV", sav);
 
-            // Exécution de la commande SQL
-            cmd.ExecuteNonQuery();
+            for (int i=0;i<20;i++)
+            {
 
+                packaging = rnd1.Next(0, 10);
+                produit = rnd2.Next(0, 10);
+                delais = rnd3.Next(0, 10);
+                sav = rnd4.Next(0, 10);
+                // Exécution de la commande SQL
+                cmd.ExecuteNonQuery();
+            }
+            
 
-
+            bdd.ConnexionClose();
         }
 
         public void GenererSatisfait()
