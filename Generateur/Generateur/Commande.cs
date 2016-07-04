@@ -19,6 +19,19 @@ namespace Generateur
 
         public void GenererSatisfaction()
         {
+            Random rnd1 = new Random();
+            Random rnd2 = new Random();
+            Random rnd3 = new Random();
+            Random rnd4 = new Random();
+
+            rnd1.Next(0, 10);
+            rnd2.Next(0, 10);
+            rnd3.Next(0, 10);
+            rnd4.Next(0, 10);
+
+
+
+
 
         }
 

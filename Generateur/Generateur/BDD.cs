@@ -10,7 +10,14 @@ namespace ConsoleApplication13
         private string userid = "root";
         private string password = "";
         private string database = "client";
-        private MySqlConnection connexion;
+        private MySqlConnection connexion
+        {
+            get
+            {
+                return this.connexion;
+            }
+        }
+            
 
 
         public BDD(string server, string userid, string password, string database) {
