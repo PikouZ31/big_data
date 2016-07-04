@@ -6,8 +6,22 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication13
 {
-    public class ActionBase
+    class Commande
     {
-        
+
+        Commande()
+        {
+            
+        }
+
+        public bool Generer()
+        {
+
+
+
+            return null;
+        }
+
+
     }
 }
