@@ -1,4 +1,5 @@
 ﻿using ConsoleApplication13;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,11 @@ namespace Generateur
 {
     class Commande
     {
+       private BDD bdd;
 
         public Commande(string server, string userid, string password, string database)
         {
-            BDD bdd = new BDD(server, userid, password, database);
+            bdd = new BDD(server, userid, password, database);
             bdd.ConnexionOpen();
         }
 
@@ -29,7 +31,16 @@ namespace Generateur
             rnd3.Next(0, 10);
             rnd4.Next(0, 10);
 
-            
+            MySqlCommand cmd = bdd.connexion.CreateCommand();
+
+            // Requête SQL
+            cmd.CommandText = "INSERT INTO nom (NOM) VALUES (@NOM)";
+
+            // utilisation de l'objet contact passé en paramètre
+            cmd.Parameters.AddWithValue("@NOM", "Gerad");
+
+            // Exécution de la commande SQL
+            cmd.ExecuteNonQuery();
 
 
 
