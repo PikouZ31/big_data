@@ -12,28 +12,20 @@ namespace ConsoleApplication13
     {
         public static void Main(string[] args)
         {
-
-
-
-            genererreference();
-            Console.WriteLine();
-            //Console.WriteLine(GetRandomDate(System.DateTime.Now, System.DateTime.Now.AddMonths(-1)));
-            Console.WriteLine(GetClient());
+            BDD bdd = new BDD("127.0.0.1", "root", "", "client");
+            bdd.ConnexionOpen();
+            Console.WriteLine(bdd.GetName());
             Console.ReadLine();
+
+
+
+            //Console.WriteLine(GetRandomDate(System.DateTime.Now, System.DateTime.Now.AddMonths(-1)));
         }
 
 
-        BDD bdd = new BDD("127.0.0.1", "root", "", "client");
+        
 
 
-
-        void generercomande()
-        {
-
-
-
-
-        }
 
         static void genererreference()
         {
@@ -107,48 +99,7 @@ namespace ConsoleApplication13
 
 
 
-        public static string GetName()
-        {
-            MySqlConnection conn;
-            string myConnectionString;
-
-            myConnectionString = "server=127.0.0.1;uid=root;" +
-                "pwd=;database=client;";
-            conn = new MySql.Data.MySqlClient.MySqlConnection();
-
-            try
-            {
-                conn.ConnectionString = myConnectionString;
-                conn.Open();
-            }
-            catch (MySql.Data.MySqlClient.MySqlException ex)
-            {
-                Console.WriteLine("Bug");
-                Console.ReadLine();
-            }
-
-
-            MySqlCommand cmd = conn.CreateCommand();
-
-            Random rnd1 = new Random();
-            int i = rnd1.Next(1, 100);
-
-            // Requête SQL
-            cmd.CommandText = "SELECT NOM FROM nom WHERE ID = '" + i + "'";
-
-
-            // Exécution de la commande SQL
-            MySqlDataReader reader = cmd.ExecuteReader();
-
-            while (reader.Read())
-            {
-                //Console.WriteLine(reader[0]+" " + reader[1]);
-                return reader[0]+"";
-            }
-            conn.Close();
-
-            return null;
-        }
+ 
 
 
         public static string GetSurname()

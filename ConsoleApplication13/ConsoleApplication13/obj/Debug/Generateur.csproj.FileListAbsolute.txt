@@ -1,3 +1,7 @@
 C:\Users\Michael\Documents\GitHub\big_data\ConsoleApplication13\ConsoleApplication13\bin\Debug\ConsoleApplication13.exe.config
 C:\Users\Michael\Documents\GitHub\big_data\ConsoleApplication13\ConsoleApplication13\obj\Debug\ConsoleApplication13.exe
 C:\Users\Michael\Documents\GitHub\big_data\ConsoleApplication13\ConsoleApplication13\obj\Debug\ConsoleApplication13.pdb
+C:\Users\Michael\Documents\GitHub\big_data\ConsoleApplication13\ConsoleApplication13\bin\Debug\ConsoleApplication13.exe
+C:\Users\Michael\Documents\GitHub\big_data\ConsoleApplication13\ConsoleApplication13\bin\Debug\ConsoleApplication13.pdb
+C:\Users\Michael\Documents\GitHub\big_data\ConsoleApplication13\ConsoleApplication13\bin\Debug\MySql.Data.xml
+C:\Users\Michael\Documents\GitHub\big_data\ConsoleApplication13\ConsoleApplication13\obj\Debug\Generateur.csprojResolveAssemblyReference.cache
