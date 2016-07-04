@@ -12,28 +12,6 @@ namespace ConsoleApplication13
     {
         public static void Main(string[] args)
         {
-            MySqlConnection conn;
-            string myConnectionString;
-
-
-            string server = "127.0.0.1";
-            string userid = "root";
-            string password = "";
-            string database = "client";
-
-            myConnectionString = "server="+ server +";uid="+ userid +";pwd="+ password +";database="+ database +";";
-            conn = new MySql.Data.MySqlClient.MySqlConnection();
-
-            try
-            {
-                conn.ConnectionString = myConnectionString;
-                conn.Open();
-            }
-            catch (MySql.Data.MySqlClient.MySqlException ex)
-            {
-                Console.WriteLine("Bug");
-                Console.ReadLine();
-            }
 
 
 
@@ -43,6 +21,9 @@ namespace ConsoleApplication13
             Console.WriteLine(GetClient());
             Console.ReadLine();
         }
+
+
+        BDD bdd = new BDD("127.0.0.1", "root", "", "client");
 
 
 
