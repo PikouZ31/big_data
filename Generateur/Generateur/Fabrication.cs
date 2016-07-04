@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Generateur
 {
-    public class Fabrication : iLis
+    public class Fabrication
     {
 
         private string server;
