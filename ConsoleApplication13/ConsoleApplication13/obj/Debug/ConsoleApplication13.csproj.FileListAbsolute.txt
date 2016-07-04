@@ -1,8 +1,0 @@
-c:\users\florian\documents\visual studio 2015\Projects\ConsoleApplication13\ConsoleApplication13\bin\Debug\ConsoleApplication13.exe.config
-c:\users\florian\documents\visual studio 2015\Projects\ConsoleApplication13\ConsoleApplication13\bin\Debug\ConsoleApplication13.exe
-c:\users\florian\documents\visual studio 2015\Projects\ConsoleApplication13\ConsoleApplication13\bin\Debug\ConsoleApplication13.pdb
-c:\users\florian\documents\visual studio 2015\Projects\ConsoleApplication13\ConsoleApplication13\bin\Debug\MySql.Data.dll
-c:\users\florian\documents\visual studio 2015\Projects\ConsoleApplication13\ConsoleApplication13\bin\Debug\MySql.Data.xml
-c:\users\florian\documents\visual studio 2015\Projects\ConsoleApplication13\ConsoleApplication13\obj\Debug\ConsoleApplication13.csprojResolveAssemblyReference.cache
-c:\users\florian\documents\visual studio 2015\Projects\ConsoleApplication13\ConsoleApplication13\obj\Debug\ConsoleApplication13.exe
-c:\users\florian\documents\visual studio 2015\Projects\ConsoleApplication13\ConsoleApplication13\obj\Debug\ConsoleApplication13.pdb
