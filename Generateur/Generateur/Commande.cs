@@ -12,7 +12,7 @@ namespace Generateur
 
         public Commande(string server, string userid, string password, string database)
         {
-            BDD bdd = new BDD("127.0.0.1", "root", "", "client");
+            BDD bdd = new BDD(server, userid, password, database);
             bdd.ConnexionOpen();
         }
 
