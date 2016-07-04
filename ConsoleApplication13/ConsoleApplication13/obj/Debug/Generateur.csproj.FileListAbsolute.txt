@@ -1,7 +1,0 @@
-C:\Users\Michael\Documents\GitHub\big_data\ConsoleApplication13\ConsoleApplication13\bin\Debug\ConsoleApplication13.exe.config
-C:\Users\Michael\Documents\GitHub\big_data\ConsoleApplication13\ConsoleApplication13\obj\Debug\ConsoleApplication13.exe
-C:\Users\Michael\Documents\GitHub\big_data\ConsoleApplication13\ConsoleApplication13\obj\Debug\ConsoleApplication13.pdb
-C:\Users\florian\Documents\GitHub\big_data\ConsoleApplication13\ConsoleApplication13\bin\Debug\ConsoleApplication13.exe.config
-C:\Users\florian\Documents\GitHub\big_data\ConsoleApplication13\ConsoleApplication13\obj\Debug\ConsoleApplication13.exe
-C:\Users\florian\Documents\GitHub\big_data\ConsoleApplication13\ConsoleApplication13\obj\Debug\ConsoleApplication13.pdb
-C:\Users\florian\Documents\GitHub\big_data\ConsoleApplication13\ConsoleApplication13\obj\Debug\Generateur.csprojResolveAssemblyReference.cache
