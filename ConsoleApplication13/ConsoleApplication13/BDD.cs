@@ -29,6 +29,8 @@ namespace ConsoleApplication13
             {
                 connexion.ConnectionString = myConnectionString;
                 connexion.Open();
+                Console.WriteLine("Connexion à la base de données établie !");
+                Console.ReadLine();
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {
@@ -48,6 +50,28 @@ namespace ConsoleApplication13
                 Console.WriteLine("Impossible de se déconnecter de la base de données !");
                 Console.ReadLine();
             }
+        }
+
+        public string GetName()
+        {
+            MySqlCommand cmd = this.connexion.CreateCommand();
+            Random rnd1 = new Random();
+
+            int i = rnd1.Next(1, 100);
+
+            // Requête SQL
+            cmd.CommandText = "SELECT NOM FROM nom WHERE ID = '" + i + "'";
+
+            // Exécution de la commande SQL
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                //Console.WriteLine(reader[0]+" " + reader[1]);
+                return reader[0] + "";
+            }
+
+            return null;
         }
 
     }

@@ -44,7 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+    <Compile Include="BDD.cs" />
+=======
     <Compile Include="ActionBase.cs" />
+    <Compile Include="Commande.cs" />
+>>>>>>> origin/master
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
