@@ -16,6 +16,10 @@ namespace ConsoleApplication13
             {
                 return this.connexion;
             }
+            set
+            {
+                this.connexion = value;
+            }
         }
             
 
