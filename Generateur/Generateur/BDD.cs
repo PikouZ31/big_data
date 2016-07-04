@@ -30,12 +30,10 @@ namespace ConsoleApplication13
                 connexion.ConnectionString = myConnectionString;
                 connexion.Open();
                 Console.WriteLine("Connexion à la base de données établie !");
-                Console.ReadLine();
             }
             catch (MySql.Data.MySqlClient.MySqlException ex)
             {
                 Console.WriteLine("Impossible de se connecter à la base de données !");
-                Console.ReadLine();
             }
         }
 

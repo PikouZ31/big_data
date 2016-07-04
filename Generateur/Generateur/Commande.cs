@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleApplication13;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,9 +10,10 @@ namespace Generateur
     class Commande
     {
 
-        public Commande()
+        public Commande(string server, string userid, string password, string database)
         {
-
+            BDD bdd = new BDD("127.0.0.1", "root", "", "client");
+            bdd.ConnexionOpen();
         }
 
 

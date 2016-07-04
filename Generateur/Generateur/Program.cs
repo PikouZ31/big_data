@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using MySql.Data.MySqlClient;
+using Generateur;
 
 namespace ConsoleApplication13
 {
@@ -12,9 +13,7 @@ namespace ConsoleApplication13
     {
         public static void Main(string[] args)
         {
-            BDD bdd = new BDD("127.0.0.1", "root", "", "client");
-            bdd.ConnexionOpen();
-            Console.WriteLine(bdd.GetName());
+            Commande BDDcommande = new Commande("127.0.0.1", "root", "", "client");
             Console.ReadLine();
         }
 
