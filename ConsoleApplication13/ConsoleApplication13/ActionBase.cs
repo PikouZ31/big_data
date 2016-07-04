@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication13
 {
-    class ActionBase
+    public class ActionBase
     {
+
     }
 }
