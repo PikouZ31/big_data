@@ -80,7 +80,7 @@ namespace Generateur
         public void GenererProduits(string table1, string colTable1, ArrayList champsColTable1, string table2, string colTable2, ArrayList champsColTable2)
         {
             /***************************************** DESCRIPTION DE LA METHODE *****************************************
-            * Cette méthode permet de copier les données d'un ou de champs d'une base de données "A" vers un ou des champs d'une base de données "B"
+            * Cette méthode permet de copier les données d'un ou des champs d'une base de données "A" vers un ou des champs d'une base de données "B"
             *
             * INSERT INTO table1.colTable1 (champsColTable1[]) SELECT colTable2[] FROM table2.colTable2
             * INSERT INTO administratif.produits (ref) SELECT Ref_produit FROM fabrication.produit
@@ -117,7 +117,6 @@ namespace Generateur
             cmdINSERT.CommandText = str.ToString();
 
             cmdINSERT.ExecuteNonQuery();
-
         }
     }
 }
