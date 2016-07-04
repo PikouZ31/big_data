@@ -15,11 +15,14 @@ namespace ConsoleApplication13
         {
             Commande BDDcommande = new Commande("127.0.0.1", "root", "", "commande");
 
+            //BDDcommande.GenererSatisfaction();
             for(int i =0;i<20;i++)
             {
-                BDDcommande.GenererSatisfaction();
+                BDDcommande.GenererEtat();
             }
             
+
+
             Console.ReadLine();
         }
 
