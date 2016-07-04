@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Generateur
 {
-    public class Fabrication
+    public class Fabrication : iLis
     {
 
         private string server;
@@ -75,22 +75,46 @@ namespace Generateur
             cmdINSERT.ExecuteNonQuery();
 
         }
+        
 
-
-        public void GenererProduits()
+        public void GenererProduits(string table1, string colTable1, ArrayList champsColTable1, string table2, string colTable2, ArrayList champsColTable2)
         {
-            //INSERT INTO new_table(columns....)
-            //SELECT columns....
-            //FROM initial_table where column = value
+            /***************************************** DESCRIPTION DE LA METHODE *****************************************
+            * Cette méthode permet de copier les données d'un ou de champs d'une base de données "A" vers un ou des champs d'une base de données "B"
+            *
+            * INSERT INTO table1.colTable1 (champsColTable1[]) SELECT colTable2[] FROM table2.colTable2
+            * INSERT INTO administratif.produits (ref) SELECT Ref_produit FROM fabrication.produit
+            *************************************************************************************************************/
+            
+
+            string champsColonneTable1 = "";
+            for (int i = 0; i < champsColTable1.Count; i++)
+            {
+                if (i != champsColTable1.Count - 1)
+                {
+                    champsColonneTable1 += champsColTable1.IndexOf(i) + ",";
+                }
+                else {
+                    champsColonneTable1 += champsColTable1.IndexOf(i);
+                }
+            }
+
+            string champsColonneTable2 = "";
+            for (int i = 0; i < champsColTable2.Count; i++)
+            {
+                if (i != champsColTable2.Count - 1)
+                {
+                    champsColonneTable2 += champsColTable2.IndexOf(i) + ",";
+                }
+                else {
+                    champsColonneTable2 += champsColTable2.IndexOf(i);
+                }
+
+            }
 
             MySqlCommand cmdINSERT = this.connexion.CreateCommand();
-
-            cmdINSERT.CommandText = "INSERT INTO produits.administratif (ref) SELECT Ref FROM produit.fabrication";
-            // utilisation de l'objet contact passé en paramètre
-            //cmdINSERT.Parameters.AddWithValue("@name", name);
-            //cmdINSERT.Parameters.AddWithValue("@duree", duree);
-            //cmdINSERT.Parameters.AddWithValue("@cadence", cadence);
-            //cmdINSERT.Parameters.AddWithValue("@changement_produit", changementproduit);
+            string str = String.Format("INSERT INTO {0}.{1} ({2}) SELECT {5} FROM {3}.{4}", table1, colTable1, champsColonneTable1, table2, colTable2, champsColonneTable2);
+            cmdINSERT.CommandText = str.ToString();
 
             cmdINSERT.ExecuteNonQuery();
 
